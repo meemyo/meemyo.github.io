@@ -1,0 +1,349 @@
+
+.picsplay-hero-content .app-logo {
+    width:378px;
+    height:56px;
+}
+
+.picsplay-hero-content .welcome {
+    font-size:32px;
+    font-style:italic;
+    padding-bottom:17px;
+    color:white;
+}
+
+.picsplay-hero-content .description {
+    margin-top:-97px;
+    padding-right:310px;
+    height:234px;
+}
+
+.picsplay-hero-content .description h2 {
+    color:white;
+    font-size:24px;
+    line-height:1.55em;
+    padding-top:23px;
+    padding-bottom:27px;
+}
+
+.picsplay-hero-content .description .link img {
+    width:184px;
+    height:54px;
+    margin-right:11px;
+}
+
+.picsplay-hero-content .description .link img {
+    width:184px;
+    height:54px;
+    margin-right:11px;
+}
+
+.picsplay-main-content {
+    min-height:222px;
+}
+
+.picsplay-main-content .title {
+    font-weight:700;
+    font-size:38px;
+    line-height:1.1em;
+    padding-top:7px;
+}
+
+.picsplay-main-content .description {
+    font-family:"Open Sans", sans-serif;
+    font-weight:300;
+    font-size:19px;
+    padding-top:21px;
+    line-height:1.8em;
+}
+
+.picsplay-main-content .icon-container img {
+    width:222px;
+    height:222px;
+}
+
+.picsplay-main-content .text-container {
+    margin-top:-222px;
+    padding-right:222px;
+}
+
+.gallery {
+    background-color:white;
+}
+
+.gallery .title {
+    color:black;
+}
+
+.gallery .title .border {
+    border-bottom:solid 1px black;
+}
+
+.gallery .title a {
+    color:black;
+}
+
+.gallery .title a:hover {
+    color:gray;
+}
+
+.information h3 {
+    font-weight:400;
+    font-style:italic;
+    padding-bottom:18px;
+}
+
+.information p {
+    font-size:17px;
+    font-family:"Open sans", sans-serif;
+    padding:0;
+    margin:0;
+    line-height:1.6em;
+}
+
+/* INFORMATION */
+#picsplay-app-logo-desktop {
+    display:inline;
+}
+
+#picsplay-app-logo-mobile {
+    display:none;
+}
+
+#picsplay-information-1 {
+    color:white;
+    background-color:#66391f;
+}
+
+#picsplay-information-1 .content .text {
+    padding-left:343px;
+    text-align:right;
+}
+
+#picsplay-information-1 .content img {
+    left:0;
+    margin-left:-21px;
+}
+
+#picsplay-information-2 {
+    color:white;
+    background-color:#e8cfcf;
+}
+
+#picsplay-information-2 .content .text {
+    padding-right:400px;
+}
+
+#picsplay-information-2 .content h3 {
+    color:#ff5364;
+}
+
+#picsplay-information-2 .content p {
+    color:#2e2e2e;
+}
+
+#picsplay-information-2 .content img {
+    right:0;
+    margin-right:-50px;
+}
+
+#picsplay-information-3 {
+    background-color:#124008;
+}
+
+#picsplay-information-3 .content .text {
+    padding-left:343px;
+    text-align:right;
+}
+
+#picsplay-information-3 .content h3{
+    color:white;
+}
+
+#picsplay-information-3 .content p{
+    color:white;
+}
+
+#picsplay-information-3 .content img{
+    left:0;
+    margin-left:-21px;
+}
+
+#picsplay-information-4 {
+    background-color:#302513;
+}
+
+#picsplay-information-4 .content .text {
+    padding-right:400px;
+}
+
+#picsplay-information-4 .content h3{
+    color:white;
+}
+
+#picsplay-information-4 .content p{
+    color:white;
+}
+
+#picsplay-information-4 .content img{
+    right:0;
+    margin-right:-21px;
+}
+
+#picsplay-information-5 {
+    background-color:#00264c;
+}
+
+#picsplay-information-5 .content .text {
+    padding-left:343px;
+    text-align:right;
+}
+
+#picsplay-information-5 .content h3{
+    color:white;
+}
+
+#picsplay-information-5 .content p{
+    color:white;
+}
+
+#picsplay-information-5 .content img{
+    left:0;
+    margin-left:-21px;
+}
+
+/* MOBILE */
+@media (max-width:767px) {
+
+    #apps-main .information h3 {
+        font-size:25px !important;
+        padding:40px 0 19px 0 !important;
+    }
+
+    #picsplay-app-logo-desktop {
+        display:none;
+    }
+
+    #picsplay-app-logo-mobile {
+        display:inline;
+    }
+
+    #picsplay-information-1 .content .text {
+        padding-left:0;
+        padding-bottom:637px;
+    }
+
+    #picsplay-information-1 .content img {
+        left:50%;
+        width:364px;
+        margin-left:-182px;
+        margin-right:0;
+    }
+
+    #picsplay-information-2 .content .text {
+        padding-right:0;
+        padding-bottom:638px;
+    }
+
+    #picsplay-information-2 .content img {
+        left:50%;
+        width:424px;
+        margin-left:-212px;
+        margin-right:0;
+        padding-bottom:5px;
+    }
+
+    #picsplay-information-3 .content .text {
+        padding-left:0;
+        padding-bottom:637px;
+    }
+
+    #picsplay-information-3 .content img {
+        left:50%;
+        width:364px;
+        margin-left:-182px;
+        margin-right:0;
+    }
+
+    #picsplay-information-4 .content .text {
+        padding-right:0;
+        padding-bottom:637px;
+    }
+
+    #picsplay-information-4 .content img {
+        left:50%;
+        width:364px;
+        margin-left:-182px;
+        margin-right:0;
+    }
+
+    #picsplay-information-5 .content .text {
+        padding-left:0;
+        padding-bottom:684px;
+    }
+
+    #picsplay-information-5 .content img {
+        left:50%;
+        width:364px;
+        margin-left:-182px;
+        margin-right:0;
+        padding-bottom:45px;
+    }
+
+    .picsplay-hero-content .screenshot {
+        display:none;
+    }
+
+    .picsplay-hero-content .app-logo {
+        /*width:277px;*/
+        width:300px;
+        height:42px;
+        padding-left:23px;
+    }
+
+    .picsplay-hero-content .description {
+        margin-top:-65px;
+        height:177px;
+        padding-right:0;
+    }
+
+    .picsplay-hero-content .description h2 {
+        color:white;
+        font-size:18px;
+        line-height:1.45em;
+        padding-top:20px;
+        padding-bottom:24px;
+    }
+
+    .picsplay-hero-content .description .link img {
+        width:130px;
+        height:39px;
+        margin-right:0;
+    }
+
+    .picsplay-main-content .icon-container img {
+        width:167px;
+        height:167px;
+    }
+
+    .picsplay-main-content .text-container {
+        margin-top:0;
+        padding-top:26px;
+        padding-right:0;
+    }
+
+    .picsplay-main-content .title {
+        font-size:24px;
+        line-height:1.1em;
+        padding-top:6px;
+    }
+
+    .picsplay-main-content .description {
+        font-size:14px;
+        padding-top:23px;
+        line-height:1.95em;
+    }
+
+    .information p {
+        font-size:15px;
+    }
+}

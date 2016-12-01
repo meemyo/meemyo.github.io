@@ -1,0 +1,369 @@
+/* ID */
+#hero-carousel .item {
+    background-color:#0d0d0d;
+    width:100%;
+    height:540px;
+    overflow:hidden;
+}
+
+@media (max-width:767px) {
+    #hero-carousel .next,
+    #hero-carousel .prev,
+    #hero-carousel .left,
+    #hero-carousel .right {
+        -webkit-transition:0.4s ease-in-out;
+        -moz-transition:0.4s ease-in-out;
+        -o-transition:0.4s ease-in-out;
+        transition:0.4s ease-in-out;
+    }
+}
+
+#hero-carousel .item .carousel-image {
+    position:absolute;
+    max-width:none;
+    display:none;
+}
+
+#hero-carousel .item .carousel-overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.6);
+    display:none;
+}
+
+#hero-carousel .item .carousel-logo-desktop {
+    display:inline;
+}
+
+#hero-carousel .item .carousel-logo-mobile {
+    display:none;
+}
+
+#app-squares {
+    background:white;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#youtube-video {
+    background:white;
+    padding-bottom:20px;
+}
+
+#app-square-moldiv .app-sqaure-logo-image {
+    width:242px;
+}
+
+#app-square-rookiecam .app-sqaure-logo-image {
+    width:173px;
+}
+
+#app-square-picsplay .app-sqaure-logo-image {
+    width:270px;
+}
+
+#app-square-happyme .app-sqaure-logo-image {
+    width:176px;
+}
+
+/* CLASS */
+.carousel-indicators {
+    bottom:9px;
+}
+
+.carousel-indicators li {
+    width:10px;
+    height:10px;
+    margin:1px 8px;
+    border:0;
+    background-color:rgba(255,255,255,0.5);
+}
+
+.carousel-indicators .active {
+    width:10px;
+    height:10px;
+    margin:1px 8px;
+    border:0;
+    background-color:rgba(255,255,255,1.0);
+}
+
+.carousel-control, .carousel-control:focus, .carousel-control:hover {
+    opacity:0.0;
+    width:10%;
+}
+
+.carousel-control img {
+    width:26px;
+    padding-top:240px;
+    padding-bottom:240px;
+}
+
+.carousel-control.left {
+    background-image:none;
+}
+
+.carousel-control.right {
+    background-image:none;
+}
+
+.carousel-caption {
+    top:50%;
+    bottom:0;
+    right:0;
+    left:0;
+    padding:0;
+    width:100%;
+}
+
+.carousel-caption img {
+    width:60%;
+}
+
+.carousel-caption h2 {
+    font-weight:300;
+    text-shadow:none;
+    margin:0;
+}
+
+.carousel-caption .container {
+    transform:translateY(-60%);
+    -ms-transform:translateY(-60%);
+    -moz-transform:translateY(-60%);
+    -webkit-transform:translateY(-60%);
+    -o-transform:translateY(-60%);
+}
+
+.carousel-caption .container-left {
+    text-align:left;
+}
+
+.carousel-caption .container-right {
+    text-align:right;
+}
+
+.app-square-container:before {
+	padding-top:95.83%;
+}
+
+.app-square-container {
+    width:50%;
+    float:left;
+}
+
+.app-square .app-square-caption-left-bottom {
+    position:absolute;
+    padding-left:30px;
+    padding-right:30px;
+    bottom:23px;
+    width:100%;
+    color:white;
+    font-size:22px;
+}
+
+.app-square .app-square-caption-left-bottom .app-sqaure-logo-image {
+    padding-bottom:6px;
+}
+
+.app-square .app-square-caption-left-bottom .btn {
+    margin-bottom:7px;
+}
+
+.app-square .btn-default {
+    padding:9px 20px 11px 21px;
+}
+
+.youtube-video-container {
+    position:relative;
+    height:320px;
+}
+
+.youtube-video-banner {
+    position:absolute;
+    left:0;
+    top:0;
+    width:320px;
+    height:320px;
+    background-color:black;
+    padding-top:90px;
+    z-index:1001;
+}
+
+.youtube-video-banner img {
+    width:145px;
+    height:69px;
+}
+
+.youtube-video-banner p {
+    text-align:center;
+    padding:0 0 30px 0;
+    margin:0;
+    width:100%;
+}
+
+.youtube-video-embed {
+    position:absolute;
+    left:0;
+    top:0;
+    padding-left:320px;
+    width:100%;
+    overflow:hidden;
+    height:320px;
+}
+
+.youtube-video-embed a {
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+    cursor:pointer;
+}
+
+.youtube-video-embed a .youtube-video-preview {
+    position:absolute;
+    left:50%;
+    top:0;
+    margin-left:-320px;
+    width:640px;
+    height:100%;
+}
+
+.youtube-video-embed a .youtube-video-overlay {
+    position:absolute;
+    display:none;
+    background-color:rgba(0, 0, 0, 0.3);
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
+.youtube-video-embed a .youtube-video-play {
+    position:absolute;
+    width:90px;
+    height:90px;
+    top:50%;
+    left:50%;
+    margin-top:-45px;
+    margin-left:-45px;
+}
+
+/* MOBILE */
+@media (max-width:767px) {
+    #app-squares {
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+    #app-square-moldiv .app-sqaure-logo-image {
+        width:181.5px;
+    }
+
+    #app-square-moldiv  .carousel-overlay {
+
+    }
+
+    #app-square-rookiecam .app-sqaure-logo-image {
+        width:129.75px;
+    }
+
+    #app-square-rookiecam  .carousel-overlay {
+
+    }
+
+    #app-square-picsplay .app-sqaure-logo-image {
+        width:202.5px;
+    }
+
+    #app-square-picsplay  .carousel-overlay {
+
+    }
+
+    #app-square-happyme .app-sqaure-logo-image {
+        width:132px;
+    }
+
+    #app-square-happyme  .carousel-overlay {
+
+    }
+
+    #youtube-video {
+        padding-bottom:10px;
+    }
+
+    #hero-carousel .item {
+      height:406px;
+    }
+
+    #hero-carousel .item .carousel-logo-desktop {
+        display:none;
+    }
+
+    #hero-carousel .item .carousel-logo-mobile {
+        display:inline;
+    }
+
+    #hero-carousel .item .carousel-overlay {
+        display:block;
+    }
+
+    #content .container {
+        padding: 0 10px;
+    }
+
+    .carousel-control {
+        display:none;
+    }
+
+    .carousel-caption .container-left {
+        text-align:center;
+    }
+
+    .carousel-caption .container-right {
+        text-align:center;
+    }
+
+    .app-square .app-square-caption-left-bottom {
+        position:absolute;
+        padding-left:20px;
+        padding-right:20px;
+        bottom:20px;
+        font-size:16.5px;
+    }
+
+    .app-square .app-square-caption-left-bottom .app-sqaure-logo-image {
+        padding-bottom:4.5px;
+    }
+
+    .app-square .app-square-caption-left-bottom .btn {
+        margin-bottom:5.25px;
+    }
+
+    .app-square .btn-default {
+        padding:6.75px 15px 8.25px 15.75px;
+        font-size:14.25px;
+    }
+}
+
+@media (max-width:649px) {
+    .app-square-container {
+        width:100%;
+        float:none;
+    }
+
+    .youtube-video-container {
+        height:auto;
+    }
+
+    .youtube-video-banner {
+        position:relative;
+        width:100%;
+    }
+
+    .youtube-video-embed {
+        position:relative;
+        width:100%;
+        margin-left:0;
+        padding-left:0;
+    }
+}
