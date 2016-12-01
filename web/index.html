@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://www.jellybus.com
+/ -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JellyBus</title>
+    <!-- DESCRIPTION -->
+    <meta name="description" content="We build great photo and video apps to make your precious moments beautiful.">
+    <meta name="keywords" content="JellyBus, moldiv, rookie cam, picsplay, happy me">
+    <meta property="og:url" content="http://jellybus.com">
+    <meta property="og:title" content="JellyBus">
+    <meta property="og:site_name" content="JellyBus">
+    <meta property="og:description" content="We build great photo and video apps to make your precious moments beautiful.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://jellybus.com/images/facebook/facebook_jellybus.jpg">
+    <!-- META -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- SCRIPT -->
+    <script async="" src="files/analytics.js"></script>
+    <script id="facebook-jssdk" src="files/sdk.js"></script>
+    <script src="files/jellybus-lib.js"></script>
+    <script src="files/page-index-init.js"></script>
+    <!-- CSS -->
+    <link href="files/bootstrap.min.css" rel="stylesheet">
+    <link href="files/jellybus.css" rel="stylesheet">
+    <link href="files/page-index.css" rel="stylesheet">
+    <link href="files/page-index-carousel.css" rel="stylesheet">
+    <!-- FONTS -->
+    <!-- <link href="css/font-default.css" rel="stylesheet"> -->
+    <link href="files/css.css" rel="stylesheet">
+    <style type="text/css">
+    .fb_hidden {
+        position: absolute;
+        top: -10000px;
+        z-index: 10001
+    }
+    
+    .fb_reposition {
+        overflow: hidden;
+        position: relative
+    }
+    
+    .fb_invisible {
+        display: none
+    }
+    
+    .fb_reset {
+        background: none;
+        border: 0;
+        border-spacing: 0;
+        color: #000;
+        cursor: auto;
+        direction: ltr;
+        font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+        font-size: 11px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: 1;
+        margin: 0;
+        overflow: visible;
+        padding: 0;
+        text-align: left;
+        text-decoration: none;
+        text-indent: 0;
+        text-shadow: none;
+        text-transform: none;
+        visibility: visible;
+        white-space: normal;
+        word-spacing: normal
+    }
+    
+    .fb_reset>div {
+        overflow: hidden
+    }
+    
+    .fb_link img {
+        border: none
+    }
+    
+    @keyframes fb_transform {
+        from {
+            opacity: 0;
+            transform: scale(.95)
+        }
+        to {
+            opacity: 1;
+            transform: scale(1)
+        }
+    }
+    
+    .fb_animate {
+        animation: fb_transform .3s forwards
+    }
+    
+    .fb_dialog {
+        background: rgba(82, 82, 82, .7);
+        position: absolute;
+        top: -10000px;
+        z-index: 10001
+    }
+    
+    .fb_reset .fb_dialog_legacy {
+        overflow: visible
+    }
+    
+    .fb_dialog_advanced {
+        padding: 10px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px
+    }
+    
+    .fb_dialog_content {
+        background: #fff;
+        color: #333
+    }
+    
+    .fb_dialog_close_icon {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+        _background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);
+        cursor: pointer;
+        display: block;
+        height: 15px;
+        position: absolute;
+        right: 18px;
+        top: 17px;
+        width: 15px
+    }
+    
+    .fb_dialog_mobile .fb_dialog_close_icon {
+        top: 5px;
+        left: 5px;
+        right: auto
+    }
+    
+    .fb_dialog_padding {
+        background-color: transparent;
+        position: absolute;
+        width: 1px;
+        z-index: -1
+    }
+    
+    .fb_dialog_close_icon:hover {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;
+        _background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)
+    }
+    
+    .fb_dialog_close_icon:active {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;
+        _background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)
+    }
+    
+    .fb_dialog_loader {
+        background-color: #f6f7f9;
+        border: 1px solid #606060;
+        font-size: 24px;
+        padding: 20px
+    }
+    
+    .fb_dialog_top_left,
+    .fb_dialog_top_right,
+    .fb_dialog_bottom_left,
+    .fb_dialog_bottom_right {
+        height: 10px;
+        width: 10px;
+        overflow: hidden;
+        position: absolute
+    }
+    
+    .fb_dialog_top_left {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
+        left: -10px;
+        top: -10px
+    }
+    
+    .fb_dialog_top_right {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
+        right: -10px;
+        top: -10px
+    }
+    
+    .fb_dialog_bottom_left {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
+        bottom: -10px;
+        left: -10px
+    }
+    
+    .fb_dialog_bottom_right {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
+        right: -10px;
+        bottom: -10px
+    }
+    
+    .fb_dialog_vert_left,
+    .fb_dialog_vert_right,
+    .fb_dialog_horiz_top,
+    .fb_dialog_horiz_bottom {
+        position: absolute;
+        background: #525252;
+        filter: alpha(opacity=70);
+        opacity: .7
+    }
+    
+    .fb_dialog_vert_left,
+    .fb_dialog_vert_right {
+        width: 10px;
+        height: 100%
+    }
+    
+    .fb_dialog_vert_left {
+        margin-left: -10px
+    }
+    
+    .fb_dialog_vert_right {
+        right: 0;
+        margin-right: -10px
+    }
+    
+    .fb_dialog_horiz_top,
+    .fb_dialog_horiz_bottom {
+        width: 100%;
+        height: 10px
+    }
+    
+    .fb_dialog_horiz_top {
+        margin-top: -10px
+    }
+    
+    .fb_dialog_horiz_bottom {
+        bottom: 0;
+        margin-bottom: -10px
+    }
+    
+    .fb_dialog_iframe {
+        line-height: 0
+    }
+    
+    .fb_dialog_content .dialog_title {
+        background: #6d84b4;
+        border: 1px solid #365899;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0
+    }
+    
+    .fb_dialog_content .dialog_title>span {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+        float: left;
+        padding: 5px 0 7px 26px
+    }
+    
+    body.fb_hidden {
+        -webkit-transform: none;
+        height: 100%;
+        margin: 0;
+        overflow: visible;
+        position: absolute;
+        top: -10000px;
+        left: 0;
+        width: 100%
+    }
+    
+    .fb_dialog.fb_dialog_mobile.loading {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+        min-height: 100%;
+        min-width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 10001
+    }
+    
+    .fb_dialog.fb_dialog_mobile.loading.centered {
+        width: auto;
+        height: auto;
+        min-height: initial;
+        min-width: initial;
+        background: none
+    }
+    
+    .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+        width: 100%
+    }
+    
+    .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+        background: none
+    }
+    
+    .loading.centered #fb_dialog_loader_close {
+        color: #fff;
+        display: block;
+        padding-top: 20px;
+        clear: both;
+        font-size: 18px
+    }
+    
+    #fb-root #fb_dialog_ipad_overlay {
+        background: rgba(0, 0, 0, .45);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        min-height: 100%;
+        z-index: 10000
+    }
+    
+    #fb-root #fb_dialog_ipad_overlay.hidden {
+        display: none
+    }
+    
+    .fb_dialog.fb_dialog_mobile.loading iframe {
+        visibility: hidden
+    }
+    
+    .fb_dialog_content .dialog_header {
+        -webkit-box-shadow: white 0 1px 1px -1px inset;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));
+        border-bottom: 1px solid;
+        border-color: #1d4088;
+        color: #fff;
+        font: 14px Helvetica, sans-serif;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+        vertical-align: middle;
+        white-space: nowrap
+    }
+    
+    .fb_dialog_content .dialog_header table {
+        -webkit-font-smoothing: subpixel-antialiased;
+        height: 43px;
+        width: 100%
+    }
+    
+    .fb_dialog_content .dialog_header td.header_left {
+        font-size: 12px;
+        padding-left: 5px;
+        vertical-align: middle;
+        width: 60px
+    }
+    
+    .fb_dialog_content .dialog_header td.header_right {
+        font-size: 12px;
+        padding-right: 5px;
+        vertical-align: middle;
+        width: 60px
+    }
+    
+    .fb_dialog_content .touchable_button {
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));
+        border: 1px solid #29487d;
+        -webkit-background-clip: padding-box;
+        -webkit-border-radius: 3px;
+        -webkit-box-shadow: rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;
+        display: inline-block;
+        margin-top: 3px;
+        max-width: 85px;
+        line-height: 18px;
+        padding: 4px 12px;
+        position: relative
+    }
+    
+    .fb_dialog_content .dialog_header .touchable_button input {
+        border: none;
+        background: none;
+        color: #fff;
+        font: 12px Helvetica, sans-serif;
+        font-weight: bold;
+        margin: 2px -12px;
+        padding: 2px 6px 3px 6px;
+        text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+    }
+    
+    .fb_dialog_content .dialog_header .header_center {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 18px;
+        text-align: center;
+        vertical-align: middle
+    }
+    
+    .fb_dialog_content .dialog_content {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+        border: 1px solid #555;
+        border-bottom: 0;
+        border-top: 0;
+        height: 150px
+    }
+    
+    .fb_dialog_content .dialog_footer {
+        background: #f6f7f9;
+        border: 1px solid #555;
+        border-top-color: #ccc;
+        height: 40px
+    }
+    
+    #fb_dialog_loader_close {
+        float: left
+    }
+    
+    .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+        text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+    }
+    
+    .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+        visibility: hidden
+    }
+    
+    #fb_dialog_loader_spinner {
+        animation: rotateSpinner 1.2s linear infinite;
+        background-color: transparent;
+        background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        height: 24px;
+        width: 24px
+    }
+    
+    @keyframes rotateSpinner {
+        0% {
+            transform: rotate(0deg)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+    
+    .fb_iframe_widget {
+        display: inline-block;
+        position: relative
+    }
+    
+    .fb_iframe_widget span {
+        display: inline-block;
+        position: relative;
+        text-align: justify
+    }
+    
+    .fb_iframe_widget iframe {
+        position: absolute
+    }
+    
+    .fb_iframe_widget_fluid_desktop,
+    .fb_iframe_widget_fluid_desktop span,
+    .fb_iframe_widget_fluid_desktop iframe {
+        max-width: 100%
+    }
+    
+    .fb_iframe_widget_fluid_desktop iframe {
+        min-width: 220px;
+        position: relative
+    }
+    
+    .fb_iframe_widget_lift {
+        z-index: 1
+    }
+    
+    .fb_hide_iframes iframe {
+        position: relative;
+        left: -10000px
+    }
+    
+    .fb_iframe_widget_loader {
+        position: relative;
+        display: inline-block
+    }
+    
+    .fb_iframe_widget_fluid {
+        display: inline
+    }
+    
+    .fb_iframe_widget_fluid span {
+        width: 100%
+    }
+    
+    .fb_iframe_widget_loader iframe {
+        min-height: 32px;
+        z-index: 2;
+        zoom: 1
+    }
+    
+    .fb_iframe_widget_loader .FB_Loader {
+        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
+        height: 32px;
+        width: 32px;
+        margin-left: -16px;
+        position: absolute;
+        left: 50%;
+        z-index: 4
+    }
+    </style>
+</head>
+
+<body>
+    <h1>JellyBus</h1>
+    <div id="main">
+        <!-- HEADER -->
+        <header>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div id="navbar-header" class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                            <img class="open-image" src="files/images/apps_menu_open.png">
+                            <img class="close-image" src="files/images/apps_menu_close.png">
+                        </button>
+                        <a id="logo" class="navbar-brand" href="index.html">
+                            <img src="files/images/apps_main_jellybus_logo.png">
+                        </a>
+                    </div>
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="dropdown">
+                                <a href="http://www.jellybus.com/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="our-apps">OUR APPS<span class="arrow-image"></span>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="http://www.jellybus.com/moldiv"><span>MOLDIV</span></a></li>
+                                    <li><a href="http://www.jellybus.com/rookiecam"><span>ROOKIE CAM</span></a></li>
+                                    <li><a href="JellyBus_inner.html"><span>PICSPLAY</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="JellyBus_AboutUs.html"><span>ABOUT US</span></a></li>
+                            <li><a href="http://www.jellybus.com/contact"><span>CONTACT</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="content">
+            <div id="hero-carousel" class="carousel slide" data-ride="carousel" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <ol class="carousel-indicators">
+                    <li data-target="#hero-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#hero-carousel" data-slide-to="1"></li>
+                    <li data-target="#hero-carousel" data-slide-to="2"></li>
+                    <li data-target="#hero-carousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div id="carousel-jellybus-item" class="item active">
+                        <img src="files/images/index_banner_jellybus.jpg" class="carousel-image select-none" data-ratio="0.5" data-width="1200" data-height="540" style="width: 1200px; height: 540px; left: -205.5px; top: 0px; display: block;">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <div class="container">
+                                <img src="files/images/index_banner_jellybus_logo.png">
+                                <h2>every little thing you wanted</h2>
+                                <a class="btn btn-default" href="JellyBus_AboutUs.html" role="button">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="carousel-moldiv-item" class="item">
+                        <img src="files/images/index_banner_moldiv.jpg" class="carousel-image select-none" data-ratio="0.725" data-width="1200" data-height="540" style="width: 1200px; height: 540px; left: -297.975px; top: 0px; display: block;">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption carousel-content-left">
+                            <div class="container container-left">
+                                <img src="files/images/index_banner_moldiv_logo.png">
+                                <h2>Photo Editor, Collage, Beauty Camera</h2>
+                                <a class="btn btn-default" href="http://www.jellybus.com/moldiv" role="button">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="carousel-picsplay-item" class="item">
+                        <img src="files/images/index_banner_picsplay.jpg" class="carousel-image select-none" data-ratio="0.7" data-width="1200" data-height="540" style="width: 1200px; height: 540px; left: -287.7px; top: 0px; display: block;">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <div class="container container-left">
+                                <img class="carousel-logo-desktop" src="files/images/index_banner_picsplay_logo.png">
+                                <img class="carousel-logo-mobile" src="files/images/index_banner_picsplay_logo_mobile.png">
+                                <h2>Photo Editor &amp; Selfie Retouch</h2>
+                                <a class="btn btn-default" href="JellyBus_inner.html" role="button">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="carousel-rookiecam-item" class="item">
+                        <img src="files/images/index_banner_rookiecam.jpg" class="carousel-image select-none" data-ratio="0.3" data-width="1200" data-height="540" style="width: 1200px; height: 540px; left: -123.3px; top: 0px; display: block;">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <div class="container container-right">
+                                <img src="files/images/index_banner_rookiecam_logo.png">
+                                <h2>Photo Editor &amp; Filter Camera</h2>
+                                <a class="btn btn-default" href="http://www.jellybus.com/rookiecam" role="button">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="http://www.jellybus.com/#hero-carousel" role="button" data-slide="prev" style="opacity: 0;">
+                    <img src="files/images/index_banner_arrow_left.png">
+                </a>
+                <a class="right carousel-control" href="http://www.jellybus.com/#hero-carousel" role="button" data-slide="next" style="opacity: 0;">
+                    <img src="files/images/index_banner_arrow_right.png">
+                </a>
+            </div>
+            <div id="app-squares">
+                <div class="container">
+                    <div class="app-square-container">
+                        <div id="app-square-moldiv" class="app-square">
+                            <img class="app-square-banner-image" src="files/images/apps_moldiv_a.jpg">
+                            <div class="app-square-overlay app-square-fill"></div>
+                            <div class="app-square-caption-left-bottom">
+                                <p><img src="files/images/apps_moldiv_logo.png" class="app-sqaure-logo-image"></p>
+                                <p>Photo Editor, Collage, Beauty Camera</p>
+                            </div>
+                            <a href="http://www.jellybus.com/moldiv" class="app-square-button app-square-fill"></a>
+                        </div>
+                    </div>
+                    <div class="app-square-container">
+                        <div id="app-square-rookiecam" class="app-square">
+                            <img class="app-square-banner-image" src="files/images/apps_rookiecam_a.jpg">
+                            <div class="app-square-fill app-square-overlay" style="display: none;"></div>
+                            <div class="app-square-caption-left-bottom">
+                                <p><img src="files/images/apps_rookiecam_logo.png" class="app-sqaure-logo-image"></p>
+                                <p>Photo Editor &amp; Filter Camera</p>
+                            </div>
+                            <a href="http://www.jellybus.com/rookiecam" class="app-square-button app-square-fill"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="app-square-container">
+                        <div id="app-square-picsplay" class="app-square">
+                            <img class="app-square-banner-image" src="files/images/apps_picsplay_a.jpg">
+                            <div class="app-square-fill app-square-overlay" style="display: none;"></div>
+                            <div class="app-square-caption-left-bottom">
+                                <p><img src="files/images/apps_picsplay_logo.png" class="app-sqaure-logo-image"></p>
+                                <p>Photo Editor &amp; Selfie Retouch</p>
+                            </div>
+                            <a href="JellyBus_inner.html" class="app-square-button app-square-fill"></a>
+                        </div>
+                    </div>
+                    <div class="app-square-container cursor-pointer">
+                        <div id="app-square-happyme" class="app-square">
+                            <img class="app-square-banner-image" src="files/images/apps_happyme_b.jpg">
+                            <div class="app-square-fill app-square-overlay" style="display: none;"></div>
+                            <div class="app-square-caption-center">
+                                <p><img src="files/images/apps_happyme_logo.png" class="app-sqaure-logo-image"></p>
+                            </div>
+                            <div class="app-square-caption-left-bottom">
+                                <a class="btn btn-default">Coming soon</a>
+                            </div>
+                            <a class="app-square-button app-square-fill"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div id="youtube-video">
+                <div class="container">
+                    <div class="youtube-video-container">
+                        <div class="youtube-video-banner">
+                            <p><img src="files/index_jellybusyoutube.png"></p>
+                            <p><a href="https://www.youtube.com/user/JellybusInc" target="_blank" class="btn btn-default">More Videos</a></p>
+                        </div>
+                        <div class="youtube-video-embed" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                            <a>
+                                <img class="youtube-video-preview" src="files/index_youtube_moldiv.jpg">
+                                <div class="youtube-video-overlay" style="display: none;"></div>
+                                <img class="youtube-video-play" src="files/index_btn_youtube_play.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+            <footer>
+                <!-- FOOTER FACEBOOK INIT -->
+                <div id="footer-nav" class="container">
+                    <div class="footer-container">
+                        <div class="footer-icon">
+                            <a href="index.html"><img src="files/images/index_home.png"></a>
+                            <a href="https://www.facebook.com/JellyBusHQ" target="_blank"><img src="files/images/index_facebook.png"></a>
+                            <a href="https://www.youtube.com/JellybusInc" target="_blank"><img src="files/index_youtube.png"></a>
+                        </div>
+                        <div class="footer-text">
+                            <div class="row">
+                                <div class="col-1 title">
+                                    <div>COMPANY</div>
+                                </div>
+                                <div class="col-2">
+                                    <div>
+                                        <a href="JellyBus_AboutUs.html">ABOUT US</a>
+                                    </div>
+                                </div>
+                                <div class="col-4"><a href="http://www.jellybus.com/contact">CONTACT</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 title">OUR APPS</div>
+                                <div class="col-2"><a href="http://www.jellybus.com/moldiv">MOLDIV</a></div>
+                                <div class="col-3"><a href="JellyBus_inner.html">PICSPLAY</a></div>
+                                <div class="col-4"><a href="http://www.jellybus.com/rookiecam">ROOKIE CAM</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-container footer-description">
+                        <div class="copyright">©2016 JellyBus Inc. All Rights Reserved.</div>
+                        <div class="facebook fb-like fb_iframe_widget" data-href="index.html" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=260262674078922&amp;container_width=0&amp;href=http%3A%2F%2Fwww.jellybus.com%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 80px; height: 20px;"></span></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- SCRIPT -->
+        <script src="files/hammer.min.js"></script>
+        <script src="files/jquery.min.js"></script>
+        <script src="files/jquery.hammer.js"></script>
+        <script src="files/bootstrap.min.js"></script>
+        <script src="files/jellybus.js"></script>
+        <script src="files/page-index.js"></script>
+</body>
+
+</html>
